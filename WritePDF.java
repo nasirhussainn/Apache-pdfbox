@@ -1,6 +1,7 @@
 import org.apache.pdfbox.pdmodel.PDDocument;
 import org.apache.pdfbox.pdmodel.PDPage;
 import org.apache.pdfbox.pdmodel.PDPageContentStream;
+import org.apache.pdfbox.pdmodel.font.PDFont;
 import org.apache.pdfbox.pdmodel.font.PDType0Font;
 import org.apache.pdfbox.pdmodel.font.PDType1Font;
 import org.apache.pdfbox.pdmodel.graphics.image.PDImage;
@@ -34,6 +35,7 @@ public class WritePDF {
         pdPageContentStream.newLine();
         pdPageContentStream.showText(mytext2);
         pdPageContentStream.newLine();
+//        pdPageContentStream.setFont(PDType1Font.TIMES_BOLD,14); to set individually
         pdPageContentStream.showText(mytext3);
         pdPageContentStream.newLine();
 
@@ -43,6 +45,15 @@ public class WritePDF {
 //        To add image content in pdf
         PDImageXObject imageXObject = PDImageXObject.createFromFile("E:\\Project Practice\\APACHE PDFBOX\\PracticeTutorial\\berry.jpg",document);
         pdPageContentStream.drawImage(imageXObject,200,585,160,120);
+
+
+// to set custom font from file
+//        File myFont1 = new File("finalem");
+//        File myFont2 = new File("");
+//
+//        PDFont font1 = PDType0Font.load(document,myFont1);
+//        PDFont font2 = PDType0Font.load(document,myFont2);
+//        pdPageContentStream.setFont(font1,20);
 
         pdPageContentStream.close();
 
