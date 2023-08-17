@@ -55,7 +55,35 @@ public class WritePDF {
 //        PDFont font2 = PDType0Font.load(document,myFont2);
 //        pdPageContentStream.setFont(font1,20);
 
+        //set bullet point
+
+//        same as simple font loading process
+//        File bulletFont = new File("filename");
+//        PDFont bulletFont1 = PDType0Font.load(document,bulletFont);
+
+        String[] myString = new String[]{
+                "Hi this Apache PDFBOX",
+                "Hi this Apache PDFBOX",
+                "Hi this Apache PDFBOX",
+        };
+
+//        for any symbol of font
+//        String bullet = "3";
+//
+//        for (String mystring:myString){
+//            pdPageContentStream.setFont(bulletFont1,18);
+//            pdPageContentStream.showText(bullet);
+//            pdPageContentStream.setFont(PDType1Font.TIMES_BOLD,18);
+//            pdPageContentStream.showText(mystring);
+//            pdPageContentStream.newLine();
+//
+//        }
+
+
+
+
         pdPageContentStream.close();
+
 
 
         document.save("E:\\Project Practice\\APACHE PDFBOX\\PracticeTutorial\\input.pdf");
