@@ -69,10 +69,22 @@ public class WritePDF {
 
 //        for any symbol of font
 //        String bullet = "3";
+        int startList = 1;
+        char alpha = 'a';
 //
 //        for (String mystring:myString){
 //            pdPageContentStream.setFont(bulletFont1,18);
+
+//        for bullet list
 //            pdPageContentStream.showText(bullet);
+
+//        for numbering list
+//        pdPageContentStream.showText(String.valueOf(startList)+" ");
+
+//        for alphabetic ordering
+//        pdPageContentStream.showText(alpha+" ");
+//        alpha++;
+//        startList++;
 //            pdPageContentStream.setFont(PDType1Font.TIMES_BOLD,18);
 //            pdPageContentStream.showText(mystring);
 //            pdPageContentStream.newLine();
