@@ -1,6 +1,7 @@
 import org.apache.pdfbox.pdmodel.PDDocument;
 import org.apache.pdfbox.pdmodel.PDPage;
 import org.apache.pdfbox.pdmodel.PDPageContentStream;
+import org.apache.pdfbox.pdmodel.common.PDRectangle;
 import org.apache.pdfbox.pdmodel.font.PDFont;
 import org.apache.pdfbox.pdmodel.font.PDType0Font;
 import org.apache.pdfbox.pdmodel.font.PDType1Font;
@@ -15,6 +16,11 @@ public class WritePDF {
     public static void main(String[] args) throws IOException{
         PDDocument document = new PDDocument();
         PDPage firstPage = new PDPage();
+
+// setting custom page size
+        PDRectangle myPageSize = new PDRectangle(600,900);
+        PDPage myPage = new PDPage(myPageSize);
+//        now just add this page in doc
         document.addPage(firstPage);
 
 //        To add text content in pdf
